@@ -1,4 +1,4 @@
-package pl.piwowarski;
+package pl.piwowarski.api.chucknorrisjokes.dto;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -18,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
         "value"
 })
 
-public class Example {
+public class ChuckNorrisJokesApiResponse {
 
     @JsonProperty("icon_url")
     private String iconUrl;
@@ -81,4 +81,14 @@ public class Example {
         this.additionalProperties.put(name, value);
     }
 
+    @Override
+    public String toString() {
+        return "ChuckNorrisJokesApiResponse{" +
+                "iconUrl='" + iconUrl + '\'' +
+                ", id='" + id + '\'' +
+                ", url='" + url + '\'' +
+                ", value='" + value + '\'' +
+                ", additionalProperties=" + additionalProperties +
+                '}';
+    }
 }
